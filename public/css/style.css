@@ -1,0 +1,125 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+}
+
+.buttons {
+  height: 80%;
+  width: 90%;
+  background-color: wheat;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.buttons button,
+.AddStudentFormContainer .button button,
+.getStudentFormContainer .button button,
+.deleteStudentFormContainer .button button,
+.UpdateStudentFormContainer .button button {
+  padding: 8px 18px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.AddStudentFormContainer,
+.getStudentFormContainer,
+.deleteStudentFormContainer,
+.UpdateStudentFormContainer {
+  margin: 18px auto;
+  height: 400px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.AddStudentFormContainer .inputFields,
+.getStudentFormContainer .inputFields,
+.deleteStudentFormContainer .inputFields,
+.UpdateStudentFormContainer .inputFields {
+  height: 280px;
+  display: flex;
+  background-color: #777;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.AddStudentFormContainer .inputFields input,
+.getStudentFormContainer .inputFields input,
+.deleteStudentFormContainer .inputFields input,
+.UpdateStudentFormContainer .inputFields input {
+  padding: 8px 12px;
+  margin: 0px 12px;
+}
+
+.AddStudentFormContainer .button,
+.getStudentFormContainer .button,
+.deleteStudentFormContainer .button,
+.UpdateStudentFormContainer .button {
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: gray;
+}
+
+.AddStudentFormContainer #result,
+.deleteStudentFormContainer #deleteStudentResult,
+.UpdateStudentFormContainer #UpdateResult {
+  height: 60px;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.studentForm {
+  display: none;
+}
+
+.getStudentFormContainer,
+.deleteStudentFormContainer {
+  height: 160px;
+}
+
+.getStudentFormContainer .inputFields,
+.deleteStudentFormContainer .inputFields {
+  height: 72px;
+}
+
+#StudentDetailsByRegNoContainer {
+  font-size: 24px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+table {
+  width: 50%;
+  margin: 24px auto;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+tr > :nth-child(odd) {
+  background-color: #ddd;
+}
+tr > :nth-child(even) {
+  background-color: #eee;
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="buttons">
+        <button id="AddStudent">Add Student</button>
+        <button id="getStudent">Get Student</button>
+        <button id="getAllStudents">Get All Students</button>
+        <button id="updateStudent">Update Student</button>
+        <button id="deleteStudent">Delete Student</button>
+      </div>
+    </div>
+    <form class="AddStudentFormContainer studentForm">
+      <div class="inputFields">
+        <input type="text" placeholder="Enter Reg No" name="regNo" required />
+        <input type="text" placeholder="Enter name" name="name" required />
+        <input
+          type="number"
+          placeholder="Enter age"
+          name="age"
+          required
+          min="1"
+          max="100"
+        />
+        <input type="text" placeholder="Enter branch" name="branch" required />
+        <input
+          type="number"
+          step="0.01"
+          placeholder="Enter CGPA"
+          name="cgpa"
+          required
+        />
+      </div>
+      <div class="button">
+        <button type="submit">Add Student</button>
+        <button type="reset">Reset Form</button>
+      </div>
+      <p id="result" class="FormResult"></p>
+    </form>
+    <form class="getStudentFormContainer studentForm">
+      <div class="inputFields">
+        <input type="text" placeholder="Enter Reg No" name="regNo" required />
+      </div>
+      <div class="button">
+        <button type="submit">Get Student</button>
+        <button type="reset">Reset Form</button>
+      </div>
+    </form>
+    <form class="deleteStudentFormContainer studentForm">
+      <div class="inputFields">
+        <input type="text" placeholder="Enter Reg No" name="regNo" required />
+      </div>
+      <div class="button">
+        <button type="submit">Delete Student</button>
+        <button type="reset">Reset Form</button>
+      </div>
+      <p id="deleteStudentResult" class="FormResult"></p>
+    </form>
+    <form class="UpdateStudentFormContainer studentForm">
+      <div class="inputFields">
+        <input type="text" placeholder="Enter Reg No" name="regNo" required />
+        <input type="text" placeholder="Enter new Name" name="name" />
+        <input
+          type="number"
+          placeholder="Enter new age"
+          name="age"
+          min="1"
+          max="100"
+        />
+        <input type="text" placeholder="Enter new Branch" name="branch" />
+        <input
+          type="number"
+          step="0.01"
+          placeholder="Enter new CGPA"
+          name="cgpa"
+        />
+      </div>
+      <div class="button">
+        <button type="submit">Update Student</button>
+        <button type="reset">Reset Form</button>
+      </div>
+      <p id="UpdateResult" class="FormResult">Result</p>
+    </form>
+    <div id="StudentDetailsByRegNoContainer" class="FormResult"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/addStudentScript.js"></script>
+    <script src="/js/getStudentScript.js"></script>
+    <script src="/js/deleteStudentScript.js"></script>
+    <script src="/js/getAllStudentsScript.js"></script>
+    <script src="/js/updateStudentScipt.js"></script>
+  </body>
+</html>
