@@ -76,7 +76,7 @@
 .deleteStudentFormContainer #deleteStudentResult,
 .UpdateStudentFormContainer #UpdateResult {
   height: 60px;
-  font-size: 28px;
+  font-size: 24px;
   display: flex;
   justify-content: center;
   align-items: center;

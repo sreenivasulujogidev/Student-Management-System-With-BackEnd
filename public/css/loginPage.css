@@ -1,0 +1,215 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.loginForm {
+  display: none;
+}
+
+.loginForm.active {
+  display: block;
+}
+
+.signin {
+  width: 420px;
+  margin: 62px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+.signin #title {
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+
+.signin .inputFields {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signin .inputFields input {
+  margin: 12px;
+  padding: 12px;
+  font-size: 14px;
+  width: 80%;
+  margin-left: 32px;
+}
+
+.signin #username {
+  margin-top: 0px;
+}
+
+.signin .inputFields .password {
+  display: flex;
+  align-items: center;
+}
+
+.signin .password button,
+.signin .captchabox div button {
+  padding: 4px 6px;
+}
+
+.signin #showPassword,
+.signin #refreshCaptcha {
+  cursor: pointer;
+}
+
+.signin .captchabox {
+  font-size: 16px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signin .captchabox div {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.signin .captchabox div #captcha {
+  width: 150px;
+  padding: 12px;
+  border: 2px solid black;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-left: 38px;
+}
+
+.signin .captchabox input {
+  width: 60%;
+  margin-left: 82px;
+  font-size: 14px;
+}
+
+.signin .buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.signin .buttons #submit {
+  font-size: 14px;
+  padding: 14px 24px;
+  margin: 12px 24px;
+  background-color: #00bfff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.signin .buttons #submit:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+.signin .buttons .Not-A-Member {
+  text-align: center;
+  font-size: 20px;
+}
+
+.signin .Not-A-Member #signup,
+.signup .Already-A-Member #signin {
+  text-decoration: none;
+  color: blue;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.signin .Not-A-Member #signup:hover,
+.signup .Already-A-Member #signin:hover {
+  transform: scale(1.06);
+}
+
+.signup {
+  width: 420px;
+  margin: 62px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding-top: 18px;
+}
+
+.signup #signUptitle {
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+
+.signup .inputFields {
+  display: flex;
+  flex-direction: column;
+  height: 220px;
+}
+
+.signup .inputFields input {
+  padding: 14px 14px;
+  margin: 12px 28px;
+  font-size: 14px;
+}
+
+.signup .signUppasswordFieldBox {
+  position: relative;
+  background-color: gray;
+  margin: 12px 28px;
+}
+
+.signup .signUppasswordFieldBox input {
+  width: 100%;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.signup .signUppasswordFieldBox i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.signup .buttons {
+  margin: 12px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.signup .buttons button {
+  padding: 8px 12px;
+  width: 70%;
+  height: 52px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #00bfff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.signup .buttons button:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+.Already-A-Member {
+  font-size: 20px;
+  text-align: center;
+}
+
+#signInResult,
+#signUpResult {
+  padding: 12px;
+  padding-bottom: 14px;
+  text-align: center;
+  font-size: 18px;
+  color: red;
+  font-weight: bold;
+}
