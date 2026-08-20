@@ -25,11 +25,6 @@ async function getStudentByRegNo() {
       branch,
       cgpa,
     } = response.data;
-    // result.innerHTML = `<p>Registartion Number : ${registrationNumber}</p>
-    //   <p>Name : ${name}</p>
-    //   <p>Age :  ${age} </p>
-    //   <p>Branch : ${branch}
-    //   <p>CGPA : ${cgpa}`;
     result.innerHTML = `<table>
       <tbody>
         <tr>

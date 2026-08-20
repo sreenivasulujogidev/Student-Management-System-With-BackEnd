@@ -5,7 +5,7 @@ const app = express.Router();
 
 app.get("/", async (req, res) => {
   try {
-    const students = await Student.find();
+    const students = await Student.find().sort({ regNo: 1 });
     if (!students) {
       return res.status(404).json("No Students Enrolled");
     }

@@ -3,7 +3,9 @@
   padding: 0px;
   box-sizing: border-box;
 }
-
+body {
+  overflow-y: scroll;
+}
 .container {
   height: 120px;
   display: flex;
@@ -19,6 +21,25 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.container #logoutBox {
+  height: 80%;
+  display: flex;
+  width: 72px;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: wheat;
+}
+
+.container #logoutBox button {
+  border: 2px solid black;
+}
+
+.container #logoutBox #logout-icon {
+  font-size: 24px;
+  padding: 4px 8px;
+  cursor: pointer;
 }
 
 .buttons button,
@@ -98,7 +119,6 @@
 
 #StudentDetailsByRegNoContainer {
   font-size: 24px;
-  height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

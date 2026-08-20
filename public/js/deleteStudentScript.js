@@ -17,7 +17,7 @@ deleteStudentForm.addEventListener("reset", () => {
 
 async function deleteStudentByRegNo() {
   const regNo = document.querySelector(
-    ".deleteStudentFormContainer .inputFields [name = 'regNo'",
+    ".deleteStudentFormContainer .inputFields [name = 'regNo']",
   ).value;
   const confirmDelete = confirm(`Delete Student with Reg No ${regNo}`);
   if (!confirmDelete) return;

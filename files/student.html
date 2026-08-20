@@ -4,16 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Management System</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <link href="/css/style.css" rel="stylesheet" />
   </head>
   <body>
     <div class="container">
       <div class="buttons">
-        <button id="AddStudent">Add Student</button>
+        <button id="AddStudent" title="Add Student">Add Student</button>
         <button id="getStudent">Get Student</button>
         <button id="getAllStudents">Get All Students</button>
         <button id="updateStudent">Update Student</button>
         <button id="deleteStudent">Delete Student</button>
+      </div>
+      <div id="logoutBox">
+        <button title="Logout" id="logout">
+          <i class="fa-solid fa-right-from-bracket" id="logout-icon"></i>
+        </button>
       </div>
     </div>
     <form class="AddStudentFormContainer studentForm">
@@ -94,5 +103,6 @@
     <script src="/js/deleteStudentScript.js"></script>
     <script src="/js/getAllStudentsScript.js"></script>
     <script src="/js/updateStudentScipt.js"></script>
+    <script src="/js/logout.js"></script>
   </body>
 </html>
