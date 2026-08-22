@@ -5,41 +5,87 @@
 }
 body {
   overflow-y: scroll;
+  position: relative;
 }
 .container {
   height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 16px;
   background-color: blueviolet;
+  position: relative;
 }
 
 .buttons {
   height: 80%;
-  width: 90%;
+  width: 92%;
   background-color: wheat;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.container #logoutBox {
+.container #SettingsBox {
   height: 80%;
   display: flex;
-  width: 72px;
+  width: 42px;
   align-items: center;
-  justify-content: flex-start;
-  background-color: wheat;
+  justify-content: center;
 }
 
-.container #logoutBox button {
-  border: 2px solid black;
+.container #SettingsBox button {
+  border: 1px solid black;
+  border-radius: 50%;
 }
 
-.container #logoutBox #logout-icon {
-  font-size: 24px;
-  padding: 4px 8px;
+.container #SettingsBox #Setting-icon {
+  font-size: 20px;
+  padding: 7px;
   cursor: pointer;
+}
+.container #Box {
+  width: 200px;
+  position: absolute;
+  top: 75%;
+  right: 12px;
+  display: none;
+  flex-direction: column;
+  background-color: #1f2328;
+  color: white;
+  border-radius: 14px;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.container #Box.visible {
+  display: flex;
+}
+
+.container #Box #Profile-Box,
+.container #Box #logoutBox {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  font-size: 18px;
+  gap: 8px;
+  cursor: pointer;
+  margin: 8px;
+  border-radius: 4px;
+}
+
+.container #Box #Profile-Box {
+  cursor: not-allowed;
+}
+
+.container #Box #logoutBox {
+  margin-top: 0px;
+}
+
+.container #Box #Profile-Box:hover,
+.container #Box #logoutBox:hover {
+  background-color: #2f3742;
 }
 
 .buttons button,
@@ -142,4 +188,91 @@ tr > :nth-child(odd) {
 }
 tr > :nth-child(even) {
   background-color: #eee;
+}
+
+#Setting-icon.rotate {
+  animation: rotate 0.5s linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+#confirmLogoutBox {
+  width: 420px;
+  height: 200px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  background-color: white;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+#confirmLogoutBox p {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+#confirmLogoutBox .confirmLogoutButtons {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#confirmLogoutBox .confirmLogoutButtons button {
+  padding: 18px 38px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: 12px;
+}
+
+#confirmLogoutBox .confirmLogoutButtons #logout_YES {
+  background-color: #16a34a;
+}
+
+#confirmLogoutBox .confirmLogoutButtons #logout_NO {
+  background-color: #dc2626;
+}
+
+#confirmLogoutBox .confirmLogoutButtons button:hover {
+  transform: scale(1.04);
+}
+
+#confirmLogoutBox.showLogoutBox {
+  display: flex;
+}
+
+#logout-overlay {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+  height: 100%;
+  width: 100%;
 }

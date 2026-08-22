@@ -19,10 +19,24 @@
         <button id="updateStudent">Update Student</button>
         <button id="deleteStudent">Delete Student</button>
       </div>
-      <div id="logoutBox">
-        <button title="Logout" id="logout">
-          <i class="fa-solid fa-right-from-bracket" id="logout-icon"></i>
+      <div id="SettingsBox">
+        <button title="Settings" id="Setting">
+          <i class="fa-solid fa-gear" id="Setting-icon"></i>
         </button>
+      </div>
+      <div id="Box">
+        <div id="Profile-Box">
+          <div title="Profile" id="profile">
+            <i class="fa-solid fa-circle-user" id="profile-icon"></i>
+          </div>
+          <p>Profile</p>
+        </div>
+        <div id="logoutBox">
+          <div title="Logout" id="logout">
+            <i class="fa-solid fa-right-from-bracket" id="logout-icon"></i>
+          </div>
+          <p>Logout</p>
+        </div>
       </div>
     </div>
     <form class="AddStudentFormContainer studentForm">
@@ -97,7 +111,16 @@
       <p id="UpdateResult" class="FormResult">Result</p>
     </form>
     <div id="StudentDetailsByRegNoContainer" class="FormResult"></div>
+    <div id="confirmLogoutBox">
+      <p>Are you sure you want to Logout ?</p>
+      <div class="confirmLogoutButtons">
+        <button id="logout_YES">Yes</button>
+        <button id="logout_NO">No</button>
+      </div>
+    </div>
+    <div id="logout-overlay"></div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/script.js"></script>
     <script src="/js/addStudentScript.js"></script>
     <script src="/js/getStudentScript.js"></script>
     <script src="/js/deleteStudentScript.js"></script>

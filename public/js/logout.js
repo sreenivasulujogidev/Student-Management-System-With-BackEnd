@@ -1,9 +1,22 @@
-const logout = document.querySelector("#logout");
+const logout = document.querySelector("#logoutBox");
+const confirmLogoutBox = document.querySelector("#confirmLogoutBox");
+const logout_YES = document.querySelector("#logout_YES");
+const logout_NO = document.querySelector("#logout_NO");
+const logout_overlay = document.querySelector("#logout-overlay");
 
 logout.addEventListener("click", () => {
-  const confirmLogout = confirm("Are you sure You want to Logout ?");
-  if (!confirmLogout) return;
+  confirmLogoutBox.classList.add("showLogoutBox");
+  logout_overlay.style.display = "block";
+});
+
+logout_YES.addEventListener("click", () => {
   doLogout();
+});
+
+logout_NO.addEventListener("click", () => {
+  confirmLogoutBox.classList.remove("showLogoutBox");
+  logout_overlay.style.display = "none";
+  return;
 });
 
 async function doLogout() {
